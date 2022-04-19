@@ -1,0 +1,10 @@
+<form action="{# comment_val_url #}" method="POST">
+    <div class="form-group">
+        <label for="comment_text">Comment</label>
+        <input type="text" class="form-control" id="comment_text" name="comment_text" placeholder="Enter your comment here...">
+    </div>
+    <input type="hidden" name="quiz_id" value="{# quiz_id #}">
+    <input type="hidden" name="result_id" value="{# result_id #}">
+
+    <button type="submit" class="btn btn-primary my-3">Submit</button>
+</form>

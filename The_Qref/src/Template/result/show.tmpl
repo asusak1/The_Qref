@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-sm">
+        <h1 class="text-center">{# quiz_name#}</h1>
+    </div>
+</div>
+<div class="row pb-5">
+    <div class="col-sm text-center">
+        {# quiz_description #}
+    </div>
+</div>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Your answer</th>
+        <th scope="col">Correct answer</th>
+        <th scope="col">Points</th>
+    </tr>
+    </thead>
+    <tbody>
+    {T answers T}
+    </tbody>
+</table>
+<hr>
+{?
+<div class="alert alert-danger" role="alert">
+    Late submission, points reduced by 50%
+</div>
+:: is_late
+::
+<div class="alert alert-success" role="success">
+    Quiz solved in time
+</div> ?}
+
+<dl class="row pb-5">
+    <dt class="col-sm-2">Score</dt>
+    <dd class="col-sm-10">{# score #} / {# total #}</dd>
+
+    <dt class="col-sm-2">Accuracy</dt>
+    <dd class="col-sm-10">{# accuracy #} %</dd>
+
+    <dt class="col-sm-2">Public quiz</dt>
+    <dd class="col-sm-10">{? yes :: public :: no ?}</dd>
+</dl>
+
+{T comment_input T}
+{T comments_block T}
